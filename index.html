@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タグ変換ツール</title>
+  <style>
+    body { font-family: sans-serif; padding: 1em; }
+    textarea { width: 100%; height: 100px; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+    #output { margin-top: 1em; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>タグ変換ツール</h1>
+  <p>日本語を入力すると、英語タグに変換します。</p>
+
+  <textarea id="input" placeholder="例: 犬 猫 青空"></textarea><br>
+  <button onclick="convert()">変換する</button>
+
+  <div id="output"></div>
+
+  <script>
+    let tagMap = {};
+
+    // JSONを読み込む
+    fetch("tags.json")
+      .then(response => response.json())
+      .then(data => {
+        tagMap = data;
+      })
+      .catch(err => {
+        console.error("JSON読み込みエラー:", err);
+      });
+
+    function convert() {
+      const input = document.getElementById("input").value.trim();
+      const words = input.split(/\s+/);
+      const result = words.map(word => tagMap[word] || word).join(", ");
+      document.getElementById("output").textContent = result;
+    }
+  </script>
+</body>
+</html>
