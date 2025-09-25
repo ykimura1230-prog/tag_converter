@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>日本語→英語タグ変換（ののちゃん専用）</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Helvetica,Arial;padding:16px;max-width:900px;margin:auto}
+    textarea{width:100%;min-height:120px;padding:8px;margin:8px 0;font-size:16px}
+    button{padding:10px 14px;font-size:15px;margin-right:8px}
+    .result{background:#f6f7fb;padding:10px;border-radius:6px;white-space:pre-wrap;margin-top:12px}
+    label{font-weight:600}
+    .small{font-size:13px;color:#666}
+  </style>
+</head>
+<body>
+  <h1>日本語 → 英語タグ変換</h1>
+  <p class="small">カンマ（,）やスペースで区切って日本語キーワードを入力 → 英語タグ列に変換します。</p>
+
+  <label>日本語入力（例: 長い髪, 青い瞳, 制服）</label>
+  <textarea id="jpInput" placeholder="長い髪, 青い瞳, 制服"></textarea>
+  <div>
+    <button onclick="convertTags()">変換する</button>
+    <button onclick="clearAll()">クリア</button>
+    <button onclick="copyResult()">結果をコピー</button>
+  </div>
+
+  <div class="result" id="result">ここに英語タグが表示されます。</div>
+
+  <script>
+    // 固定辞書（GitHub Pages用）
+    const dictionary = {
+      "男":"male",
+      "女":"female",
+      "長い髪":"long hair",
+      "短い髪":"short hair",
+      "青い瞳":"blue eyes",
+      "赤い瞳":"red eyes",
+      "制服":"school uniform",
+      "笑顔":"smile",
+      "微笑む":"smile softly",
+      "涙":"tears",
+      "猫耳":"cat ears",
+      "黒髪":"black hair",
+      "白髪":"white hair",
+      "高品質":"masterpiece, best quality",
+      "薄暗い":"dim lighting",
+      "夕焼け":"sunset",
+      "背景ぼかし":"bokeh background"
+      // ここにどんどんタグ追加可能
+    };
+
+    function convertTags(){
+      const input = document.getElementById("jpInput").value.trim();
+      if(!input){ 
+        alert("日本語を入力してください。"); 
+        return; 
+      }
+      const parts = input.split(/[,、\s]+/).filter(Boolean);
+      const out = parts.map(p => dictionary[p] || p).filter(Boolean);
+      document.getElementById("result").textContent = out.join(", ");
+    }
+
+    function clearAll(){
+      document.getElementById("jpInput").value = "";
+      document.getElementById("result").textContent = "ここに英語タグが表示されます。";
+    }
+
+    function copyResult(){
+      const t = document.getElementById("result").textContent;
+      navigator.clipboard?.writeText(t).then(()=>alert("コピーしました")).catch(()=>alert("コピーに失敗しました"));
+    }
+  </script>
+</body>
+</html>
