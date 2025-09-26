@@ -43,6 +43,11 @@
       "りなちゃん結び":"two side up",
       "ツインテール":"twintails",
       "ドリルツインテ":"twin drills",
+      "三つ編み":"braid",
+      "目の間の髪":"hair between eyes",
+      "多色の髪":"multicolored hair",
+      "もみあげ":"sidelocks",
+      "グラデーションヘア":"gradient hair",
       
       "黒い瞳":"black eyes",
       "白い瞳":"white eyes",
@@ -52,6 +57,7 @@
       "黄色い瞳":"yellow eyes",
       "オレンジ色の瞳":"orange eyes",
       "緑の瞳":"green eyes",
+      "ピンク色の瞳":"pink eyes",
       "紫色の瞳":"purple eyes",
       "金色の瞳":"golden eyes",
       
@@ -63,6 +69,7 @@
       "黄色い髪":"yellow hair",
       "オレンジ色の髪":"orange hair",
       "緑の髪":"green hair",
+      "ピンク色の髪":"pink hair",
       "紫色の髪":"purple hair",
       "金髪":"blonde hair",
       "黒髪":"black hair",
@@ -100,6 +107,12 @@
       "タイト":"tight",
       "黒いエプロン":"black apron",
       "ショール":"shawl",
+      "肩出し":"bare shoulders",
+      "手袋":"gloves",
+      "襟なし":"detached collar",
+      "レースの縁どり":"lace trim",
+      "レースで縁ったドレス":"lace-trimmed dress",
+      "肩紐のないドレス":"strapless dress",
       
       "笑顔":"smile",
       "微笑む":"smile softly",
@@ -110,6 +123,7 @@
       "楽しい":"happy",
       "照れる":"blush",
       "頬を染める":"blush",
+      "恥ずかしがり屋":"shy",
       
       "こちらを見る":"looking at viewer",
       "持つ":"holding",
@@ -119,9 +133,11 @@
       "谷間":"cleavage",
       "座っている":"sitting",
       "花束を持つ":"holding bouquet",
+      "ブーケを持つ":"holding bouquet",
       "両手を上げる":"hands up",
       "紙を持っている":"holding paper",
       "顎を触る":"touch chin",
+      "俯く":"looking down",
       
       "猫耳":"cat ears",
       "中くらいの胸":"medium breasts",
@@ -129,6 +145,8 @@
       "コマ割り":"comic",
       "ハート":"heart",
       "髪にリボン":"hair bow",
+      "アクセサリー":"jewelry",
+      "イヤリング":"earrings",
       "複数の男の子":"multiple boys",
       "複数の女の子":"multiple girls",
       "電話":"phone", 
@@ -156,6 +174,8 @@
       "夕焼け":"sunset",
       "背景ぼかし":"bokeh background",
       "室内":"indoors",
+      "屋内":"indoors",
+      "建物の中":"indoors",
       "シンプルな背景":"simple background",
       "白い背景":"white background",
       "茂み":"bush",
@@ -166,6 +186,8 @@
       "上半身":"upper body",
       "全身":"whole body",
       "空間":"from a distance",
-      
+          
+      "
+          
       "ex":""
     }
