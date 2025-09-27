@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ブロック単位ソートツール</title>
+<style>
+  body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 16px; }
+  textarea { width: 100%; height: 200px; margin: 8px 0; padding: 8px; font-size: 16px; }
+  button { padding: 8px 12px; margin-right: 8px; }
+  .result { background: #f6f7fb; padding: 10px; border-radius: 6px; white-space: pre-wrap; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>ブロック単位ソートツール</h1>
+<p>空行で区切られたブロックごとにソートします。</p>
+
+<textarea id="inputText" placeholder="ここにテキストを貼り付け"></textarea>
+<div>
+  <button onclick="sortBlocks()">ソートする</button>
+  <button onclick="clearAll()">クリア</button>
+  <button onclick="copyResult()">結果をコピー</button>
+</div>
+
+<div class="result" id="result">ここにソート結果が表示されます。</div>
+
+<script>
+function sortBlocks() {
+  const text = document.getElementById("inputText").value;
+  if(!text.trim()) { alert("テキストを入力してください。"); return; }
+
+  // 空行でブロックに分割
+  const blocks = text.split(/\n\s*\n/);
+
+  // 各ブロック内でソート
+  const sortedBlocks = blocks.map(block => {
+    const lines = block.split(/\n/).filter(Boolean);
+    lines.sort((a,b)=>a.localeCompare(b, 'ja'));
+    return lines.join('\n');
+  });
+
+  // 結合して表示
+  document.getElementById("result").textContent = sortedBlocks.join('\n\n');
+}
+
+function clearAll() {
+  document.getElementById("inputText").value = "";
+  document.getElementById("result").textContent = "ここにソート結果が表示されます。";
+}
+
+function copyResult() {
+  const t = document.getElementById("result").textContent;
+  navigator.clipboard?.writeText(t).then(()=>alert("コピーしました")).catch(()=>alert("コピーに失敗しました"));
+}
+</script>
+</body>
+</html>
