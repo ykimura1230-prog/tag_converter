@@ -26,6 +26,7 @@
       "目隠れ":"hair over eyes",
 
       "アシメ":"asymmetrical hair",
+      "ローポニー":"low ponytail",
       "インテーク":"hair intakes",
       "ウェーブの髪":"wavy hair",
       "ウェーブヘア":"wavy hair",
@@ -87,6 +88,9 @@
       "緑の髪":"green hair",
 
       "カーゴパンツ":"cargo pants",
+      "グレーのジャケット":"grey jacket",
+      "グレーのパンツ":"grey pants",
+      "グレーのスーツ":"grey suit",
       "コルセット":"corset",
       "ジャケット":"jacket",
       "ショートパンツ":"short pants",
@@ -181,8 +185,12 @@
       "ブーケを持つ":"holding bouquet",
       "よそ見する":"looking at another",
       "握りしめた手":"clenched hands",
-      "羽を広げる":"spread wings
-      "レース":"lace",
+      "羽を広げる":"spread wings",
+      "口を開ける":"open mouth",
+      "フォーマル":"formal",
+      "足組み":"crossed legs",
+      "片側を上げる":"one side up",
+      "袖まくり":"sleeves rolled up",
       "横たわる":"lying",
       "花束を持つ":"holding bouquet",
       "顎を触る":"touch chin",
@@ -214,7 +222,7 @@
       "イヤリング":"earrings",
       "ケモ耳":"animal ears",
       "コイン":"coin",
-      "ゴーグル":"goggles
+      "ゴーグル":"goggles",
       "フリル":"frill",
       "コーヒーブラッシュ":"coffeeblush",
       "コマ割り":"comic",
@@ -234,6 +242,7 @@
       "ボタン":"buttons",
       "マグカップ":"mug",
       "雲":"cloud",
+      "レース":"lace",
       "王冠":"crown",
       "花":"flower", 
       "牙":"fang out",
@@ -247,6 +256,24 @@
       "携帯電話":"cellphone",
       "月":"moon",
       "犬":"dog",
+      "机":"desk",
+      "黒縁メガネ":"black-framed eyewear",
+      "めがね":"glasses",
+      "メガネ":"glasses",
+      "眼鏡":"glasses",
+      "ケーキ":"cake",
+      "チョコ":"chocolate",
+      "バレンタイン":"valentine",
+      "ハートの髪飾り":"heart hair ornament",
+      "いす":"chair",
+      "椅子":"chair",
+      "食べ物":"food",
+      "チェック柄":"plaid",
+      "ピンク色のエプロン":"pink apron",
+      "コンピュータ":"computer",
+      "ノートパソコン":"laptop",
+      "ネクタイ":"necktie",
+      "黒いネクタイ":"black necktie",
       "航空機":"aircraft",
       "黒いシュシュ":"black scrunchie",
       "黒いチョーカー":"black choker",
@@ -298,6 +325,8 @@
       "建物の外":"outdoor",
       "建物の中":"indoors",
       "室内":"indoors",
+      "キッチン":"kitchen",
+      "台所":"kitchen",
       "青い背景":"blue background",
       "曇り空":"cloudy sky",
       "日中":"day",
@@ -327,6 +356,7 @@
 
       "↓ここから未分類↓":"",
 
+          
       "ex":""
 
     }
